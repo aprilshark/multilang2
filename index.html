@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/course.css">
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <script src="js/slideshow.js"></script>
+    <script src="js/quizv2.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+
+
+</head>
+
+<body onload="changeImg('first'); loadSlideshow();">
+    <nav>
+        <b class="left" id="logo">Multi lang</b>
+        <div class="right">
+            <a class="lang">English</a>
+            <a class="lang">Deutsch</a>
+            <a class="lang">Español</a>
+        </div>
+    </nav>
+
+    <!-- <div class="contentcontainer"> -->
+    <img id="largeImg">
+    <!-- </div> -->
+    <div class="slideshow">
+        <img src="img/lang1.jpg" class="thumbnail" id="first">
+        <img src="img/lang2.png" class="thumbnail">
+        <img src="img/lang3.jpg" class="thumbnail">
+        <img src="img/lang4.jpg" class="thumbnail">
+    </div>
+
+    <div class="titletextcontainer">
+        <h1 class="titletext">Курсы немецкого для всех</h1>
+    </div>
+
+    <div class="flexcontainer">
+        <div class="coursecontainer" id="course1">
+            <p class="coursetext">Курс для начинающих</p>
+        </div>
+
+        <div class="coursecontainer" id="course2">
+            <p class="coursetext">Курс для продолжающих</p>
+        </div>
+
+        <div class="coursecontainer" id="course3">
+            <p class="coursetext">Курс для путешествий</p>
+        </div>
+    </div>
+
+    <div class="titletextcontainer">
+        <h1 class="titletext">Можем подобрать подходящий курс</h1>
+    </div>
+
+    <form onsubmit="setQuizResult(); return false">
+        <div class="flexcontainer">
+            <div class="flexitem">
+                <h3>Для чего вы хотите изучить немецкий?</h3>
+                <input type="radio" id="q1a1" name="quiz1" value="0">
+                <label for="q1a1">Для работы</label><br>
+                <input type="radio" id="q1a2" name="quiz1" value="1">
+                <label for="q1a2">Для путешествия</label><br>
+                <input type="radio" id="q1a3" name="quiz1" value="0">
+                <label for="q1a3">Для учёбы</label>
+            </div>
+
+            <div class="flexitem">
+                <h3>……………… heißt du?</h3>
+                <input type="radio" id="q2a1" name="quiz2" value="0">
+                <label for="q2a1">Wo</label><br>
+                <input type="radio" id="q2a2" name="quiz2" value="0">
+                <label for="q2a2">Wieso</label><br>
+                <input type="radio" id="q2a3" name="quiz2" value="1">
+                <label for="q2a3">Wie</label>
+            </div>
+
+            <div class="flexitem">
+                <h3>Heute ist Freitag, der …………… .</h3>
+                <input type="radio" id="q3a1" name="quiz3" value="1">
+                <label for="q3a1">dreizente</label><br>
+                <input type="radio" id="q3a2" name="quiz3" value="0">
+                <label for="q3a2">dreizehnten</label><br>
+                <input type="radio" id="q3a3" name="quiz3" value="0">
+                <label for="q3a3">dreizehnte</label>
+            </div>
+
+            <div class="flexitem">
+                <h3>Ich ……………… gern Fahrrad.</h3>
+                <input type="radio" id="q4a1" name="quiz4" value="0">
+                <label for="q4a1">fährst</label><br>
+                <input type="radio" id="q4a2" name="quiz4" value="1">
+                <label for="q4a2">fahre</label><br>
+                <input type="radio" id="q4a3" name="quiz4" value="0">
+                <label for="q4a3">fahren</label>
+            </div>
+
+            <div class="flexitem">
+                <h3>Frau Braun ist schön und ihre Mutter ist …………… . (Antonym)</h3>
+                <input type="radio" id="q5a1" name="quiz5" value="0">
+                <label for="q5a1">klein</label><br>
+                <input type="radio" id="q5a2" name="quiz5" value="0">
+                <label for="q5a2">dumm</label><br>
+                <input type="radio" id="q5a3" name="quiz5" value="1">
+                <label for="q5a3">hässlich</label>
+            </div>
+
+            <div class="flexitem">
+                <h3>Das ist ……………… kleine Schwester.</h3>
+                <input type="radio" id="q6a1" name="quiz6" value="1">
+                <label for="q6a1">meine</label><br>
+                <input type="radio" id="q6a2" name="quiz6" value="0">
+                <label for="q6a2">meiner</label><br>
+                <input type="radio" id="q6a3" name="quiz6" value="0">
+                <label for="q6a3">mein</label>
+            </div>
+        </div>
+        <input type="submit" class="centered" value="Узнать результат!">
+    </form>
+
+    <div id="quizresult" class="centered"></div>
+
+
+    <div class="titletextcontainer">
+        <h1 class="titletext">Отзывы</h1>
+    </div>
+
+    <div class="flexcontainer">
+        <div class="flexitem">
+            <img class="reviewimg" src="img/review1.jpg">
+            <div class="reviewtext">
+                <h3>Александра</h3>
+                <p>Мы с мужем проходили курс для путешествий, это нам очень пригодилось в нашей поездке в Гамбург.
+                    Курс
+                    достаточно насыщенный, много полезной лексики.</p>
+            </div>
+        </div>
+        <div class="flexitem">
+            <img class="reviewimg" src="img/review2.jpg">
+            <div class="reviewtext">
+                <h3>Антон</h3>
+                <p>Решил для общего развития начать учить немецкий , до этого иностранными языками занимался только
+                    в
+                    школе. Сейчас я занимаюсь в школе "multi lang" в группе для начинающих. Преподаватели опытные и
+                    каждый урок с ними как праздник.</p>
+            </div>
+        </div>
+        <div class="flexitem">
+            <img class="reviewimg" src="img/review3.jpg">
+            <div class="reviewtext">
+                <h3>Алексей</h3>
+                <p>Всегда увлекался различными иностранными языками. На данный момент я заканчиваю курс для
+                    начинающих,
+                    от занятий положительные эмоции и самое главное знания! Планирую продолжать обучение в этой
+                    школе.
+                </p>
+            </div>
+        </div>
+        <div class="flexitem">
+            <img class="reviewimg" src="img/review4.jpg">
+            <div class="reviewtext">
+                <h3>Алиса</h3>
+                <p>Я изучаю немецкий давно, пробовала разные учебники, курсы, методики. Решила попробовать курс для
+                    продолжающих ,который предлагает школа "multi lang". Ни разу не пожалела! Учителя начитанные и
+                    внимательны к каждому ученику.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="titletextcontainer">
+        <h1 class="titletext">О школе</h1>
+    </div>
+
+    <div class="contentcontainer">
+        <p class="fillerparagraph">Изучайте иностранный язык прямо сейчас в режиме онлайн или очно посещая занятия в
+            языковой школе. Различные
+            программы, разработанные с учетом международных стандартов, современные методики изучения и нескучная
+            языковая
+            практика - всё это Вас ждёт в школе multi lang.
+            Все уровни от A1 до C2. </p>
+
+        <p class="fillerparagraph">Вы хотите улучшить свои языковые навыки? Или выучить язык с нуля?
+            Наши опытные преподаватели, являющиеся носителями языка, полностью сфокусируются на ваших потребностях.</p>
+
+        <p class="fillerparagraph">Мы заботимся о безопасности наших клиентов и работников поэтому существует
+            возможность прохождения курсов в
+            онлайн формате. Абсолютно без потери качества образования и с эффективным персональным планом обучения,
+            который
+            поможет достичь абсолютно любые цели.</p>
+
+        <p class="fillerparagraph">Мы с нетерпением ждем встречи с вами и будем рады лично проконсультировать вас о том,
+            какой языковой курс вам
+            больше всего подходит!</p>
+    </div>
+
+    <div class="titletextcontainer">
+        <h1 class="titletext">Наши преподаватели</h1>
+    </div>
+
+    <div class="flexcontainer">
+        <div class="flexitem">
+            <img class="reviewimg" src="img/teacher1.jpg">
+            <div class="reviewtext">
+                <p>Александра - очень опытный, высококвалифицированный преподаватель. Профессионально обучает
+                    практической фонетике немецкого языка. Прошла стажировку по программе “Немецкий язык в теории и
+                    практике” в Гердер-Институте Лейпцигского университета.
+
+                    Имеет опыт преподавания 14 лет.
+                </p>
+            </div>
+        </div>
+
+        <div class="flexitem">
+            <img class="reviewimg" src="img/teacher2.jpg">
+            <div class="reviewtext">
+                <p>Антон – коммуникабельный и обаятельный молодой человек, владеющий тремя иностранными языками
+                    (немецкий, английский, испанский) Имеет сертификат TestDaF (TDN 19 из 20), что соответствует
+                    владению немецким языком на уровне С1.
+
+                    Преподавательский стаж – с 2015 года.
+                </p>
+            </div>
+        </div>
+
+        <div class="flexitem">
+            <img class="reviewimg" src="img/teacher3.jpg">
+            <div class="reviewtext">
+                <p>Алиса - постоянно совершенствует свои профессиональные навыки, не боится трудных задач. Имеет богатый
+                    опыт преподавания немецкого языка, в том числе корпоративным клиентам.
+                    Имеет научные публикации по лингвистике текста. Прошла стажировку во Фрайбургском университете
+                    (Albert- Ludwigs- Universität Freiburg im Breisgau)
+
+                    Опыт преподавания – 8 лет.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
