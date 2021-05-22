@@ -1,0 +1,23 @@
+.reviewimg {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px;
+
+}
+
+.reviewtext {
+    max-width: 400px;
+    float: right;
+    margin: 10px;
+}
+
+/* @media only screen and (min-width: 400px) {
+    .reviewtext {
+        width: 400px;
+        float: right;
+        margin: 10px;
+    }
+    } */

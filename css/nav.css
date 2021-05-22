@@ -1,0 +1,35 @@
+nav {
+    display: flex;
+    width: 100% - 20px;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: #C9EAD6;
+    object-fit: scale-down;
+}
+
+.left {
+    align-self: flex-start;
+    text-align: left;
+    float: left;
+}
+
+.right {
+    align-self: flex-end;
+    text-align: right;
+    float: right;
+    margin: 5px;
+    margin-left: auto;
+}
+
+#logo {
+    background-color: #307A4E;
+    color: white;
+    padding: 5px;
+}
+
+.lang {
+    background-color: #307A4E;
+    color: white;
+    padding: 5px;
+    margin-left: 5px;
+}

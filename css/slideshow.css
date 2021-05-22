@@ -1,0 +1,30 @@
+.slideshow {
+    display: flex;
+    overflow-x: auto;
+    max-width: 423px;
+    margin: 0 auto;
+}
+
+.thumbnail {
+    height: 64px;
+    margin: 3px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#largeImg {
+    display: block;
+    object-fit: cover;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 16/9;
+}
+
+/* @media only screen and (min-width: 900px) {
+    #largeImg {
+        object-fit: cover;
+        width: 900px;
+        height: auto;
+    }
+} */
